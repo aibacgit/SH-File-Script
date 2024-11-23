@@ -235,3 +235,4 @@ function provisioning_download() {
 }
 
 provisioning_start
+mkdir "/workspace/ComfyUI/TEMP"
