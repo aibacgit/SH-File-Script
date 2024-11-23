@@ -9,7 +9,8 @@
 #DEFAULT_WORKFLOW="https://..."
 
 CHECKPOINT_MODELS=(
-    "https://huggingface.co/Corcelio/mobius/resolve/main/mobius-fp16.safetensors"
+    "https://huggingface.co/Corcelio/mobius/resolve/main/mobius-fp16.safetensors",
+    "https://huggingface.co/SG161222/RealVisXL_V4.0/resolve/main/RealVisXL_V4.0.safetensors"
 )
 
 
