@@ -9,7 +9,7 @@
 #DEFAULT_WORKFLOW="https://..."
 
 CHECKPOINT_MODELS=(
-    "https://www.tiktok.com/@https://huggingface.co/ostris/fabricated/video/reality"
+    "https://civitai.com/api/download/models/813603?token=9e43adb82ff7e57d959b54a32e92dcb0"
 )
 
 
