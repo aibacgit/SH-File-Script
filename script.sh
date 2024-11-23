@@ -9,8 +9,8 @@
 #DEFAULT_WORKFLOW="https://..."
 
 CHECKPOINT_MODELS=(
-    "https://civitai.com/api/download/models/813603?token=9e43adb82ff7e57d959b54a32e92dcb0",
-    "https://civitai.com/api/download/models/760338?token=9e43adb82ff7e57d959b54a32e92dcb0",
+    "https://civitai.com/api/download/models/813603",
+    "https://civitai.com/api/download/models/760338"
 )
 
 
