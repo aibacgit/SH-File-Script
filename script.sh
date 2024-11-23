@@ -9,7 +9,7 @@
 #DEFAULT_WORKFLOW="https://..."
 
 CHECKPOINT_MODELS=(
-    "https://civitai.com/api/download/models/813603",
+    "https://civitai.com/api/download/models/813603"
     "https://civitai.com/api/download/models/760338"
 )
 
