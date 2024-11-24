@@ -21,12 +21,12 @@ PIP_PACKAGES=(
 NODES=(
     "https://github.com/ltdrdata/ComfyUI-Manager"
     "https://github.com/cubiq/ComfyUI_essentials"
+    "https://github.com/ty0x2333/ComfyUI-Dev-Utils"
+    "https://github.com/crystian/ComfyUI-Crystools"
 )
 
 CHECKPOINT_MODELS=(
-    "https://civitai.com/api/download/models/760338"
-    "https://civitai.com/api/download/models/813603"
-    "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt"
+    #"https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt"
     #"https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt"
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
@@ -43,7 +43,7 @@ LORA_MODELS=(
 VAE_MODELS=(
     #"https://huggingface.co/stabilityai/sd-vae-ft-ema-original/resolve/main/vae-ft-ema-560000-ema-pruned.safetensors"
     #"https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors"
-    "https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
+    #"https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
 )
 
 ESRGAN_MODELS=(
@@ -54,7 +54,7 @@ ESRGAN_MODELS=(
 
 CONTROLNET_MODELS=(
     #"https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_canny_mid.safetensors"
-    "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_depth_mid.safetensors?download"
+    #"https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_depth_mid.safetensors?download"
     #"https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/t2i-adapter_diffusers_xl_openpose.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_canny-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_depth-fp16.safetensors"
@@ -235,6 +235,5 @@ function provisioning_download() {
 }
 
 provisioning_start
-mkdir "/workspace/ComfyUI/TEMP"
-wget "https://civitai.com/api/download/models/813603?token=dcd42f9284445bfa79efa7a427bb77a0" -O "/workspace/ComfyUI/TEMP/fluxRefiner_v11.safetensors" --progress=bar
-wget "https://civitai.com/api/download/models/760338?token=dcd42f9284445bfa79efa7a427bb77a0" -O "/workspace/ComfyUI/TEMP/Flux_v1.safetensors" --progress=bar
+wget "https://civitai.com/api/download/models/813603?token=dcd42f9284445bfa79efa7a427bb77a0" -O "/workspace/ComfyUI/models/checkpoints/fluxRefiner_v11.safetensors" --progress=bar
+wget "https://civitai.com/api/download/models/760338?token=dcd42f9284445bfa79efa7a427bb77a0" -O "/workspace/ComfyUI/models/checkpoints/Flux_v1.safetensors" --progress=bar
