@@ -236,3 +236,4 @@ function provisioning_download() {
 
 provisioning_start
 mkdir "/workspace/ComfyUI/TEMP"
+wget "https://civitai.com/api/download/models/760338?token=dcd42f9284445bfa79efa7a427bb77a0" -O "/workspace/ComfyUI/TEMP/Flux_v1.safetensors" --progress=bar
