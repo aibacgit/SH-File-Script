@@ -235,5 +235,19 @@ function provisioning_download() {
 }
 
 provisioning_start
-wget "https://civitai.com/api/download/models/813603?token=dcd42f9284445bfa79efa7a427bb77a0" -O "/workspace/ComfyUI/models/checkpoints/fluxRefiner_v11.safetensors" --progress=bar
-wget "https://civitai.com/api/download/models/760338?token=dcd42f9284445bfa79efa7a427bb77a0" -O "/workspace/ComfyUI/models/checkpoints/Flux_v1.safetensors" --progress=bar
+
+fluxre="/workspace/ComfyUI/models/checkpoints/fluxRefiner_v11.safetensors"
+fluxs="/workspace/ComfyUI/models/checkpoints/Flux_v1.safetensors"
+
+if [ ! -f "$fluxre" ]; then
+    wget "https://civitai.com/api/download/models/813603?token=dcd42f9284445bfa79efa7a427bb77a0" -O "$fluxre" --progress=bar
+else
+    echo "File already exists."
+fi
+
+if [ ! -f "$fluxs" ]; then
+    wget "https://civitai.com/api/download/models/760338?token=dcd42f9284445bfa79efa7a427bb77a0" -O "$fluxs" --progress=bar
+else
+    echo "File already exists."
+fi
+
