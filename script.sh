@@ -237,9 +237,21 @@ function provisioning_download() {
 provisioning_start
 
 check="/workspace/ComfyUI/models/checkpoints/aZovyaPhotoreal_v3.safetensors"
+depth="/workspace/ComfyUI/models/controlnet/controlnet11Models_depth.safetensors"
+canny="/workspace/ComfyUI/models/controlnet/controlnet11Models_canny.safetensors"
 
 if [ ! -f "$check" ]; then
     wget "https://civitai.com/api/download/models/813603?token=dcd42f9284445bfa79efa7a427bb77a0" -O "$check" --progress=bar
+else
+    echo "File already exists."
+fi
+if [ ! -f "$canny" ]; then
+    wget "https://civitai.com/api/download/models/44716?token=dcd42f9284445bfa79efa7a427bb77a0" -O "$canny" --progress=bar
+else
+    echo "File already exists."
+fi
+if [ ! -f "$depth" ]; then
+    wget "https://civitai.com/api/download/models/44736?token=dcd42f9284445bfa79efa7a427bb77a0" -O "$depth" --progress=bar
 else
     echo "File already exists."
 fi
