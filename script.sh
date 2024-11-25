@@ -237,9 +237,14 @@ function provisioning_download() {
 provisioning_start
 
 check="/workspace/ComfyUI/models/checkpoints/aZovyaPhotoreal.safetensors"
+sdxl="/workspace/ComfyUI/models/checkpoints/sdxl.safetensors"
 depth="/workspace/ComfyUI/models/controlnet/controlnet11Models_depth.safetensors"
 canny="/workspace/ComfyUI/models/controlnet/controlnet11Models_canny.safetensors"
-
+if [ ! -f "$sdxl" ]; then
+    wget "civitai.com/api/download/models/272378?token=dcd42f9284445bfa79efa7a427bb77a0" -O "$sdxl" --progress=bar
+else
+    echo "File already exists."
+fi
 if [ ! -f "$check" ]; then
     wget "civitai.com/api/download/models/474400?token=dcd42f9284445bfa79efa7a427bb77a0" -O "$check" --progress=bar
 else
