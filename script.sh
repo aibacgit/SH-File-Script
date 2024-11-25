@@ -241,7 +241,7 @@ depth="/workspace/ComfyUI/models/controlnet/controlnet11Models_depth.safetensors
 canny="/workspace/ComfyUI/models/controlnet/controlnet11Models_canny.safetensors"
 
 if [ ! -f "$check" ]; then
-    wget "https://civitai.com/api/download/models/474400?token=dcd42f9284445bfa79efa7a427bb77a0" -O "$check" --progress=bar
+    wget "civitai.com/api/download/models/474400?token=dcd42f9284445bfa79efa7a427bb77a0" -O "$check" --progress=bar
 else
     echo "File already exists."
 fi
